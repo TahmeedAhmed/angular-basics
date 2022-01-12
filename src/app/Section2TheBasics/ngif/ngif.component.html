@@ -1,0 +1,17 @@
+<h1>ngIf Component</h1>
+
+<button (click)="buttonClicked = true"> Click? </button>
+
+<p *ngIf="buttonClicked"> <i>Button was clicked</i></p>
+
+<p> Ghana </p>
+
+<!--Below is using the 'else' in ngIf-->
+<h3>Using the 'else': </h3>
+
+<p *ngIf="buttonClicked; else notClickedYet"><i>Button has now been clicked :)</i></p>
+
+<ng-template #notClickedYet>
+    <p><i>Waiting for button to be clicked...</i></p>
+</ng-template>
+

@@ -1,0 +1,5 @@
+<h2>Custom Event Binding Whilst Passing Data Between Components</h2>
+
+<label>Enter a number to increment the Age above by </label> 
+<input type="text" (input)="onType($event.target.value)"/>
+<button (click)="buttonClicked()">Increment</button>

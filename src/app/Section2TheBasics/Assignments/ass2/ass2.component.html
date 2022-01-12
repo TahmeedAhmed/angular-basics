@@ -1,0 +1,7 @@
+<h1>Assignment 2 - Practicing Databinding</h1>
+
+<input type="text" [(ngModel)]="username" (input)="handleInput()"/>
+
+<p>Username is: {{username}}</p>
+
+<button [disabled]="disableButton" (click)="buttonClicked()"> Reset Username </button>

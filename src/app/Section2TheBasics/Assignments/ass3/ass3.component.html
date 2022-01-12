@@ -1,0 +1,15 @@
+<h1>Assignment 3 - Practicing Derivatives</h1>
+<!--
+<button (click)="showString = !showString"> Display Details </button>
+-->
+
+<button (click)="handleClick()"> Display Details </button>
+<p *ngIf="showString"> GHANA </p>
+
+<h3>Log of Clicks</h3>
+<p *ngFor="let click of arrayOfClicks"
+    [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'null', color: click >= 5 ? 'white' : 'black'}"
+    >
+    Number of clicks:  {{click}} 
+</p>
+

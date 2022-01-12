@@ -1,0 +1,10 @@
+<h2>Assignment 4 - Practicing Property and Event Binding</h2>
+
+<app-game-control (incrementNumberEvent)="incrementNumber($event)"> </app-game-control>
+
+
+
+<div *ngFor="let numb of arrayOfNumbers">
+    <app-odd *ngIf="numb %2 != 0" [number]="numb"> </app-odd>
+    <app-even *ngIf="numb %2 == 0" [number]="numb"> </app-even>
+</div>

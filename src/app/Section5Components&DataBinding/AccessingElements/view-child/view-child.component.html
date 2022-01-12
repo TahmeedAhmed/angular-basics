@@ -1,0 +1,17 @@
+<h2>View Child Component</h2>
+
+<p> We will be using @ViewChild to grab the value of the input element and show it</p>
+
+<input type="text" #inputElement />
+
+<button (click)="onClick()"> Click </button>
+
+{{valueToDisplay}}
+
+
+<!--
+    We used @ViewChild in backend to grab the <input /> element with local reference #inputElement.
+    Then we used the value from the element to display it back into the frontend.
+
+    We didnt need to use 2-way binding
+-->

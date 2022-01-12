@@ -1,0 +1,14 @@
+<h1>input-test3 component</h1>
+
+<input type="text" (input)="onType($event.target.value)" [value]="text" />
+
+<button (click)="clear()"> Clear </button>
+
+<p *ngIf="text != ''"> Typed: {{text}} </p>
+
+<!--
+    We are binding the 'value' property of the input field here.
+    We bind it to the 'text' variable
+    And what ever changes we make to this variable (in comp) gets reflected on the input field (in view)!
+    Remove '   [value]="text"   '   and see what happens to get a better idea
+-->

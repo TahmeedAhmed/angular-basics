@@ -1,0 +1,25 @@
+<h1>input-test2 component</h1>
+<input type="text" (input)="handleInput($event.target.value)"/>
+{{ text }}
+
+<p>This way is easier !</p>
+
+<!--
+    We did (input)="handleInput($event.target.value)"
+
+    handleInput(input: string){
+        this.text = input;
+    }
+
+    Nice and simple. 
+
+
+    
+    Previously in input-test 1, we did (input)="handleInput($event)"
+    And then had to do some clapped casting for the event
+    
+    handleInput(event: Event){
+        this.text = (<HTMLInputElement>event.target).value;
+    }
+    
+-->

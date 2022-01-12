@@ -1,0 +1,94 @@
+Directives with a * are 'Structural Directives'
+e.g. *ngIf, *ngFor
+They are Structural coz they change the DOM, hence why a * is needed
+
+----------------------------------------------------------------------------
+
+TYPES OF DATA BINDING
+
+1) One-way Binding      (   Property Binding && Event Binding   )
+2) Two-way Binding      (   This is the [(ngModel)]    )
+
+Good links: 
+https://www.youtube.com/watch?v=x_vtX3vvE8k         (One-way Binding)
+https://www.youtube.com/watch?v=bKfbzpANUFE         (Two-way Binding)
+
+
+----------------------------------------------------------------------------
+
+PROPERTY BINDING    (One-way Binding)
+
+This is transferring data from the component to the view                (watch video if needed)
+
+e.g. 
+
+<button [disabled]="isDisabled" >
+[] needed, otherwise '  disabled="isDisabled" would be treatd as a string, when a boolean is needed!    '
+----------------------------------------------------------------------------
+
+EVENT BINDING       (One-way Binding)
+
+This is transferring data from the view to the component
+
+<button (click)="handler()" >
+() needed, this is the syntax
+----------------------------------------------------------------------------
+
+Example of property binding vs normal way:
+
+<img [src]="image.url" />   Property Binding
+<img src={{image.url}} />   Normal html way with String Interpolation
+
+----------------------------------------------------------------------------
+
+Watch videos 72 ad 73 on overriding which css is used and that
+
+----------------------------------------------------------------------------
+
+ngOnChanges - called after a bound input property changes
+ngOnInit -      called once the component is initialised
+ngDoCheck -     called during every change detection run
+ngAfterContentInit -    called after content (ng-content) has been projected into view
+ngAfterContentChecked -     called every time the projected content has been checked
+ngAfterViewInit -   called after the component's view (and child views) have been initialised
+ngAfterViewChecked -    called every time the view (and child views) have been checked
+ngOnDestroy -   called once the component is about to be destroyed
+
+----------------------------------------------------------------------------
+
+DIFFERENT WAYS TO DISPLAY DATA
+
+- local references
+- 2 way binding [(ngModel)]
+- blah blah, check everything! string interpolation?
+- ng content
+
+----------------------------------------------------------------------------
+
+STRUCTURAL DIRECTIVES
+
+An element can only have 1 Structural Directive. e.g. *ngFor
+- Can't have both *ngFor and *ngIf on one element!
+
+
+----------------------------------------------------------------------------
+
+Revist video 101: Building our Own Structural Directive
+
+----------------------------------------------------------------------------
+
+SERVICES
+
+When a component has a service added to it (in the providers: []), all of that components children
+have access to that same instance of that service, unless a child component declares the same 
+service in its own 'providers', then that child component would spawn a new instance of the service.
+
+Moreover, good to add services to 'app.module.ts' providers. Then all components would get the 
+service. 
+
+SERVICES - @INJECTABLE() --> Injecting Services into Services
+
+i.e. including a service in another service
+You should add the Decorator @Injectable() above the class
+Then can use another service in this service
+Look at video Section 9 video 112 Injecting Services into Services

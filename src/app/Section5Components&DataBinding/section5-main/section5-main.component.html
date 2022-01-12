@@ -1,0 +1,42 @@
+<h1>section 5 Components and Data Binding</h1>
+
+Age: {{number}}
+
+<hr>
+<app-custom-property-binding [car]="car1"></app-custom-property-binding>
+
+<hr>
+<app-custom-event-binding (incrementExternalVarEvent)="incrementNumber()"></app-custom-event-binding>
+
+<!--
+    the method 'incrementNumber()' is triggered when the event 'incrementExternalVarEvent' happens
+    incrementExternalVarEvent is an event we bind to.
+    incrementExternalVarEvent is an event defined in 'custom-event-binding.component.ts'. Check that file
+-->
+
+<hr>
+<app-custom-event-binding-with-data (incrementExternalNumberEventBy)="incrementNumberBy($event)"></app-custom-event-binding-with-data>
+<!-- we added $event in 'incrementNumberBy($event)' coz the method needs the number to increment by -->
+
+
+<hr>
+<app-local-reference-in-templates></app-local-reference-in-templates>
+
+<hr>
+<app-view-child></app-view-child>
+
+<hr>
+
+<app-ng-content>
+    <p>Projecting this from parent component to the rendered component</p>
+    <p> can pass in any {{" data"}} </p>
+</app-ng-content>
+
+<hr> 
+
+<app-content-child>
+    <p #sentence> this is the content we want to access</p>
+</app-content-child>
+
+<hr>
+<app-ass4></app-ass4>

@@ -1,0 +1,17 @@
+<h1>Section 7 - Directives</h1>
+
+<p appBasicHighlight> A Paragraph with our Custom Directive</p>
+
+<p appBetterHighlight> A Paragraph with our Custom better Directive (using Renderer2)</p>
+
+<p appBetterHighlightWithHostListener> A Paragraph with our Custom better Directive (using Renderer2) and Host Listener</p>
+
+<p appHostBinding> A Paragraph with our Custom Directive and Host Listener, using Host Binding, instead of Renderer2</p>
+
+<p appPropertyBindingDirective [highlightColour]="'purple'"> A Paragraph with our Custom Directive with Property Binding</p>
+<!--
+    We did ]="'purple'" coz we want a string. 
+    If we did ]="purple"  then it would mean a var called purple
+    Could also do ]="getColour()" to return a string !
+-->
+

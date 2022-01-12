@@ -1,0 +1,11 @@
+<h2>Local References in Templates</h2>
+
+<p>Enter name: </p>
+<input type="text" #inputElementName />
+<button (click)="showName(inputElementName)"> Show Name </button>
+<p>Name entered: {{name}}</p>
+
+<!-- Local references can only be used in the html template. Not in the typescript file! 
+     But you can pass the local reference to the backend with a method and use it there
+     You pass the actual Element. So in the case above, you pass the representation of <Input />
+-->
